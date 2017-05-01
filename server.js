@@ -20,9 +20,9 @@ app.post('/', upload.array(), function(req, res){
     const SIZE = 32;
     this.MODEL_CONFIG = {
         filepaths: {
-            model: '../prediction_code/model.json',
-            weights: '../prediction_code/model_weights.buf',
-            metadata: '../prediction_code/model_metadata.json'
+            model: 'model_features/model.json',
+            weights: 'model_features/model_weights.buf',
+            metadata: 'model_features/model_metadata.json'
         },
         filesystem: true
     };
