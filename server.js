@@ -36,6 +36,10 @@ app.post('/', upload.array(), function(req, res){
         IJS.load(image).then(function(image) {
             image = image.grey();
             image = image.scale({width: SIZE, height: SIZE});
+            //image = image.sobelFilter({
+            //			kernelY: [[3],[2],[1]],
+            //			//channels: .00000001			
+            //});
 
             try {
                 model.ready().then(function(){
@@ -52,8 +56,8 @@ app.post('/', upload.array(), function(req, res){
 	};
 
     const building_map = {
-        1 : "North",
-        0 : "South"
+        1 : "North side of University Library",
+        0 : "South side of University Library"
     };
 	function get_building_type(prediction)
 	{
