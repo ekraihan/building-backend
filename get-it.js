@@ -1,13 +1,9 @@
-$(document).ready(function(){
-
-//     IJS.load('north.jpg').then(function(image) {
-//		image = image.grey();
+// Written By Elias Kraihanzel
 //
-//		image = image.scale({width: 500, height: 500});
-//		
-//		//		$("#my_div").html(image.getCanvas());
-//	})
-//	
+// This code sends an image to a server that can run the image through 
+// a model and return what building is in the image 
+
+$(document).ready(function(){
 	var base64file;
 
 	$("#submit").click(function () {
@@ -21,7 +17,6 @@ $(document).ready(function(){
 			var file = new FileReader();
 		 	file.onloadend = function() {
 				base64file = file.result;
-				//console.log(base64file)
 				send_pic()
 			}
 			file.readAsDataURL(request.response);   

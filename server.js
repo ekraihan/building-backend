@@ -1,3 +1,10 @@
+/*
+Written by Elias Kraihanzel
+
+This code listens for post requests. It can take an image and pass it through
+a keras-js model and return what type of building is in the image
+*/
+
 let express = require('express');
 let app = express();
 
